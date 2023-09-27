@@ -1,0 +1,1 @@
+httparty "https://api.shodan.io/shodan/host/search?key=$SHODAN_KEY&query=android+debug+bridge+product%3A%E2%80%9DAndroid+Debug+Bridge%E2%80%9D+country%3A%22BR%22" -f json | jq -r '.matches|map_values(.http.host)[]'
